@@ -1,0 +1,7 @@
+<h1>Potwierdzenie zamówienia</h1>
+<p>Dziękujemy za złożenie zamówienia. Oto lista produktów:</p>
+<ul>
+  <% @order.order_product.each do |order_products| %>
+    <li><%= order_products.product.name %> (Ilość: <%= order_products.amount %>)</li>
+  <% end %>
+</ul>
